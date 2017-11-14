@@ -166,7 +166,7 @@ section .textWrapper {
 	padding-bottom: 30px;
 }
 .talk {
-	padding-bottom: 10px;
+	padding: 50px 0;
 }
 .talkDesc {
 	padding-bottom: 30px;
@@ -305,12 +305,38 @@ footer p {
 .speakersPage .speaker {
 	margin-bottom: 40px;
 }
+
+.speakerName {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	margin: 0;
+	position: relative;
+	color: #076800;
+	font-size: 20px;
+	line-height: 1.5em;
+	display: inline-block;
+	padding-right: 40px;
+}
+
+
+.talk a {
+font-size: 20px;
+position: relative;
+border-bottom: 2px solid #076800;
+}
+
+.talk a:before {
+	content: '/';
+	position: absolute;
+	left: -25px;
+	color: #076800;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /* SCHEDULE PAGE */
 .schedule-item {
-/*	display: flex;
-	flex-direction: column;*/
 	margin-bottom: 20px;
-	
 }
 .scheduleList {
 	border-left: 1px solid black;
