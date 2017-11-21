@@ -414,6 +414,33 @@ footer p {
 	border-radius: 50%;
 }
 
+/* table */
+
+.tg  {border-collapse:collapse;border-spacing:0;
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{
+	font-size:14px;
+	font-weight:bold;
+	padding:10px 5px;
+	border: 1px solid black;
+	overflow:hidden;
+	word-break:normal; 
+	background: #076800; 
+	color: white;
+}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+
+.tg tr:nth-of-type(2n+1) {
+	background: rgba(7, 104, 0, 0.2);
+}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+
 @media (max-width: 1180px) {
 	h1 {
 		font-size: 9.5vw; 
