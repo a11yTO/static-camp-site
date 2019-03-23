@@ -1,6 +1,6 @@
-# Conf. Site README
+# Camp Site README
 
-We used [the simple and static benefits of Jekyll](https://jekyllrb.com/) to help manage our Conf. site. You'll need to have Jekyll installed on your computer to manipulate the site and see those changes locally. Installing Jekyll is relatively easy to do. 
+We used [the simple and static benefits of Jekyll](https://jekyllrb.com/) to help manage our Camp site. You'll need to have Jekyll installed on your computer to manipulate the site and see those changes locally. Installing Jekyll is relatively easy to do. 
 
 On a Mac, on the command line (The Terminal) type:
 
