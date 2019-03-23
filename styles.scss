@@ -162,16 +162,16 @@ header p.subtitle {
   color: $brand-color;
   border-bottom: 2px solid #d44619;
 }
-.buyTickets a {
+.tickets a {
   background: $brand-color;
   border-radius: 25px;
   color: $background;
   padding: 8px 15px;
   white-space: nowrap;
 }
-.buyTickets a:hover,
-.buyTickets a:active,
-.buyTickets a:focus {
+.tickets a:hover,
+.tickets a:active,
+.tickets a:focus {
   border: 0;
   color: $background;
 }
