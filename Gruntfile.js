@@ -16,12 +16,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+		watch: {
+			css: {
+				files: 'styles.scss',
+				tasks: ['sass'],
+			},
+		},
+
   });
 
   // Load the plugins.
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['watch', 'sass']);
 
 };
