@@ -88,8 +88,12 @@ a {
 a:hover,
 a:focus,
 a:active {
-  text-decoration: none;
+  border-bottom: 0;
   color: #d44619;
+}
+a.current-page {
+  border-bottom: 0;
+  color: #d44619 !important;
 }
 
 /* header */
