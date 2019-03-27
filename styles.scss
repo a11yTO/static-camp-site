@@ -107,7 +107,7 @@ header {
 .logoContainer {
   background: $background;
   border-bottom: 3px solid $accent-color;
-  padding: 15px;
+  padding: 15px 0 10px;
   text-align: left;
 }
 .logoContainer svg {
@@ -515,27 +515,36 @@ footer p {
   }
   .logoContainer {
     text-align: center;
+    padding-bottom: 0;
   }
   .logoContainer svg {
     left: 0;
+  }
+  .branding {
+    padding: 10px 0 0;
   }
   .main-navigation {
     float: none;
     right: 0;
   }
-  .menu ul {
+  .nav-menu {
     display: flex;
     justify-content: space-around;
   }
-  .menu li {
-    float: none;
-  }
-  .menu a {
-  }
-
   footer p {
     left: initial;
     padding: 25px 8vw;
   }
 }
-/* end media query 580px */
+/* end media query 620px */
+
+
+@media (max-width: 325px) {
+  .nav-menu {
+    display: block;
+  }
+  .nav-menu li {
+    float: none;
+  }
+}
+/* end media query 325px */
