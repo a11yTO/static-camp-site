@@ -17,7 +17,7 @@ title: a11yTOCamp
 email: info@a11yto.com
 description: Opening the doors for a full day of accessibility learning
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://camp.a11yto.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://camp.a11yto.com/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: a11yTO
 github_username:  a11yTO
 
