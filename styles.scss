@@ -91,37 +91,28 @@ a:active {
   border-bottom: 0;
   color: #d44619;
 }
+.site-header a.current-page,
 a.current-page {
   border-bottom: 0;
-  color: #d44619 !important;
+  color: #d44619;
 }
 
 /* header */
-header {
+.site-header {
   background: $brand-color;
-  background-repeat: no-repeat;
-  background-position: top center;
-  text-align: center;
-  background-size: 150%;
 }
-.logoContainer {
+.event-branding {
   background: $background;
   border-bottom: 3px solid $accent-color;
-  padding: 15px 0 10px;
-  text-align: left;
-}
-.logoContainer svg {
-  position: relative;
-  left: 7%;
+  padding: 24px 5%;
 }
 .branding {
   height: auto;
-  padding: 20px 0;
+  padding-top: 4px;
   width: 200px;
 }
-header .text-wrapper {
+.event-detail {
   width: 63%;
-  text-align: left;
   margin: 0 auto;
 }
 header p {
@@ -144,11 +135,10 @@ header p.subtitle {
 /* nav */
 .main-navigation {
   float: right;
-  position: relative;
-  right: 5%;
+  padding-bottom: 4px;
 }
 .nav-menu ul {
-  margin: 0 7%;
+  margin: 0;
 }
 .nav-menu li {
   border: none;
@@ -157,17 +147,18 @@ header p.subtitle {
   position: relative;
 }
 .nav-menu a {
+  border-bottom: 2px solid #d44619;
   color: $main-font-color;
-  border: none;
 }
 .nav-menu a:hover,
 .nav-menu a:active,
 .nav-menu a:focus {
   color: $brand-color;
-  border-bottom: 2px solid #d44619;
+  border-bottom: 0;
 }
 .tickets a {
   background: $brand-color;
+  border: 0;
   border-radius: 25px;
   color: $background;
   padding: 8px 15px;
@@ -250,6 +241,7 @@ section p span {
 }
 ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 li {
@@ -513,12 +505,9 @@ footer p {
     font-size: 4.6vw;
     line-height: 6.5vw;
   }
-  .logoContainer {
+  .event-branding {
     text-align: center;
-    padding-bottom: 0;
-  }
-  .logoContainer svg {
-    left: 0;
+    padding: 15px 2% 0;
   }
   .branding {
     padding: 10px 0 0;
@@ -539,7 +528,7 @@ footer p {
 /* end media query 620px */
 
 
-@media (max-width: 325px) {
+@media (max-width: 340px) {
   .nav-menu {
     display: block;
   }
@@ -547,4 +536,4 @@ footer p {
     float: none;
   }
 }
-/* end media query 325px */
+/* end media query 340px */
