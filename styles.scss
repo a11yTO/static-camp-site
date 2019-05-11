@@ -78,7 +78,6 @@ p {
   line-height: 24px;
 }
 a {
-  font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: $brand-color;
   text-decoration: none;
@@ -303,9 +302,10 @@ footer p {
 }
 .speakers h1,
 .talks h1,
-.playlist h1,
+.schedule h1,
 .organizers h1,
-.conduct h1 {
+.conduct h1,
+.not-found h1 {
   color: $brand-color;
   margin: 0;
   position: relative;
@@ -316,9 +316,10 @@ footer p {
 }
 .speakers h1:before,
 .talks h1:before,
-.playlist h1:before,
+.schedule h1:before,
 .organizers h1:before,
-.conduct h1:before {
+.conduct h1:before,
+.not-found h1:before {
   content: "/";
   position: absolute;
   left: -75px;
@@ -434,6 +435,46 @@ footer p {
 .organizer-detail img {
   max-width: 200px;
   border-radius: 50%;
+}
+
+/* Schedule table */
+.tg  {
+  border-collapse:collapse;border-spacing:0;
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+.tg a {
+  color: $main-font-color
+}
+.tg td{
+  font-size:14px;
+  padding:10px 5px;
+  border-style:solid;
+  border-width:1px;
+  overflow:hidden;
+  word-break:normal;}
+.tg th{
+	font-size:14px;
+	font-weight:bold;
+	padding:10px 5px;
+	border: 1px solid black;
+	overflow:hidden;
+	word-break:normal; 
+	background: #076800; 
+	color: white;
+}
+.tg .tg-baqh{
+  text-align:center;
+  vertical-align:top
+}
+.tg .tg-yw4l{
+  vertical-align:top;
+}
+
+.tg tr:nth-of-type(2n+1) {
+	background: rgba(7, 104, 0, 0.2);
 }
 
 @media (max-width: 1180px) {
