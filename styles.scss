@@ -91,11 +91,17 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: $brand-color;
   font-family: $heading-font-stack;
-  font-size: $base-font-size*2;
+  font-size: $base-font-size*1.5;
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
   position: relative;
+}
+.page-title {
+  font-size: $base-font-size*2;
+}
+.home .page-title {
+  font-size: $base-font-size*1.75;
 }
 .event {
   text-align: center;
@@ -120,10 +126,10 @@ h1, h2, h3, h4, h5, h6 {
 .page-title {
   margin-bottom: 0.5em;
 }
-.sponsorships h3 {
-  font-size: $base-font-size*1.25;
-  font-weight: 400;
-  margin: 1.5em 0 1em;
+.sub-head {
+  font-size: $base-font-size*1.15;
+  font-weight: 600;
+  margin: 1em 0 0;
 }
 @media screen and (min-width: 25em) {
   h1, h2, h3, h4, h5, h6 {
@@ -132,6 +138,14 @@ h1, h2, h3, h4, h5, h6 {
   .page-title {
     font-size: $base-font-size*3.5;
     letter-spacing: -0.04em;
+  }
+  .main .home .page-title {
+    font-size: $base-font-size*2.25;
+  }
+}
+@media screen and (min-width: 35em) {
+  .main .home .page-title {
+    font-size: $base-font-size*3.5;
   }
 }
 @media screen and (min-width: 0) {
@@ -296,6 +310,9 @@ a:focus {
     .nav-menu {
       justify-content: flex-end;
     }
+    .irl .nav-menu {
+      padding: 1.8em 0;
+    }
   }
 }
 .event {
@@ -320,7 +337,10 @@ article,
   padding: 1.5em 5%;
   width: 1000px;
 }
-.home .sponsorships {
+.irl .home .sponsorships,
+.conf .home .sponsorships,
+.gaming .home .sponsorships,
+.camp .home .sponsorships {
   margin-top: -1.5em;
 }
 @media screen and (min-width: 0) {
