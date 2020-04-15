@@ -5,7 +5,7 @@ $a11yto-brand-color: #000000;
 $meetups-brand-color: #b30a2e;
 $camp-brand-color: #076800;
 $conf-brand-color: #025b9f;
-$irl-brand-color: #6C2E7D;
+$irl-brand-color: #6c2e7d;
 $gaming-brand-color: #d43d27;
 
 $brand-color: $camp-brand-color;
@@ -31,7 +31,7 @@ $main-nav-wide-breakpoint: 50em;
 /* -------------------------------------------------------------------------
  * Global reset
  * ------------------------------------------------------------------------- */
- html {
+html {
   box-sizing: border-box;
 }
 *,
@@ -61,22 +61,22 @@ body {
 .hidden {
   display: none;
 }
- /* End global reset */
+/* End global reset */
 
 /* -------------------------------------------------------------------------
  * Utility class to hide content visually while keeping it screen reader-accessible.
  * Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
  * ------------------------------------------------------------------------- */
- .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
   clip-path: inset(100%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
- /* End sr-only class */
+/* End sr-only class */
 
 /* -------------------------------------------------------------------------
  * Typography structure & style
@@ -88,20 +88,25 @@ body {
   font-size: $base-font-size;
   line-height: 1.55;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $brand-color;
   font-family: $heading-font-stack;
-  font-size: $base-font-size*1.5;
+  font-size: $base-font-size * 1.5;
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
   position: relative;
 }
 .page-title {
-  font-size: $base-font-size*2;
+  font-size: $base-font-size * 2;
 }
 .home .page-title {
-  font-size: $base-font-size*1.75;
+  font-size: $base-font-size * 1.75;
 }
 .event {
   text-align: center;
@@ -118,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .event-detail,
 .event-description {
-  font-size: $base-font-size*2;
+  font-size: $base-font-size * 2;
 }
 .event-date {
   font-weight: bold;
@@ -127,25 +132,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 .sub-head {
-  font-size: $base-font-size*1.15;
+  font-size: $base-font-size * 1.15;
   font-weight: 600;
   margin: 1em 0 0;
 }
 @media screen and (min-width: 25em) {
-  h1, h2, h3, h4, h5, h6 {
-    font-size: $base-font-size*2.25;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: $base-font-size * 2.25;
   }
   .page-title {
-    font-size: $base-font-size*3.5;
+    font-size: $base-font-size * 3.5;
     letter-spacing: -0.04em;
   }
   .main .home .page-title {
-    font-size: $base-font-size*2.25;
+    font-size: $base-font-size * 2.25;
   }
 }
 @media screen and (min-width: 35em) {
   .main .home .page-title {
-    font-size: $base-font-size*3.5;
+    font-size: $base-font-size * 3.5;
   }
 }
 @media screen and (min-width: 0) {
@@ -173,7 +183,7 @@ ul,
 ol {
   margin: 1.5em 0;
 }
- /* End typography structure & styles */
+/* End typography structure & styles */
 
 /* -------------------------------------------------------------------------
  * Link styles
@@ -219,7 +229,7 @@ a:focus {
     padding: 0.75em 0.25em 0;
   }
 }
- /* End link styles */
+/* End link styles */
 
 /* -------------------------------------------------------------------------
  * Page structure & styles
@@ -337,12 +347,12 @@ article,
   padding: 1.5em 5%;
   width: 1000px;
 }
-.irl .home .sponsorships,
-.conf .home .sponsorships,
-.gaming .home .sponsorships,
-.camp .home .sponsorships {
-  margin-top: -1.5em;
-}
+// .irl .home .sponsorships,
+// .conf .home .sponsorships,
+// .gaming .home .sponsorships,
+// .camp .home .sponsorships {
+//   margin-top: -1.5em;
+// }
 @media screen and (min-width: 0) {
   article,
   .travel,
@@ -351,7 +361,7 @@ article,
     max-width: 55.55em;
   }
 }
- ul.team {
+ul.team {
   border: 0;
   list-style: none;
   padding: 0;
@@ -446,12 +456,12 @@ article,
   padding: 0;
 }
 .venue {
-  font-size: $base-font-size*1.25;
+  font-size: $base-font-size * 1.25;
   font-weight: bold;
 }
 footer {
   padding: 0.25em 5%;
-} 
+}
 /* End page structure & styles */
 
 /* -------------------------------------------------------------------------
@@ -502,17 +512,17 @@ button {
 /* -------------------------------------------------------------------------
 * Camp schedule table
 * ------------------------------------------------------------------------- */
-.tg  {
+.tg {
   border-collapse: collapse;
   border-spacing: 0;
-	color: #333;
+  color: #333;
   font-size: 0.85em;
   margin-bottom: 3em;
 }
 .tg a {
-  color: $main-font-color
+  color: $main-font-color;
 }
-.tg td{
+.tg td {
   font-size: 0.85em;
   padding: 0.56em 0.27em;
   border-style: solid;
@@ -520,35 +530,35 @@ button {
   overflow: hidden;
   word-break: normal;
 }
-.tg th{
-	font-size: 0.85em;
-	font-weight: bold;
+.tg th {
+  font-size: 0.85em;
+  font-weight: bold;
   padding: 0.56em 0.27em;
-	border: 1px solid black;
-	overflow: hidden;
-	word-break: normal; 
-	background: $brand-color; 
-	color: white;
+  border: 1px solid black;
+  overflow: hidden;
+  word-break: normal;
+  background: $brand-color;
+  color: white;
 }
-.tg .tg-baqh{
+.tg .tg-baqh {
   text-align: center;
-  vertical-align: top
+  vertical-align: top;
 }
-.tg .tg-yw4l{
+.tg .tg-yw4l {
   vertical-align: top;
 }
 
-.tg tr:nth-of-type(2n+1) {
-	background: rgba(7, 104, 0, 0.2);
+.tg tr:nth-of-type(2n + 1) {
+  background: rgba(7, 104, 0, 0.2);
 }
 /* -------------------------------------------------------------------------
 * #a11yTO.com Branded Events structure & styles
 * ------------------------------------------------------------------------- */
 .branded-events {
   ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+    list-style: none;
+    padding: 0;
+    text-align: center;
   }
   li {
     display: inline-block;

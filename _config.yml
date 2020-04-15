@@ -17,7 +17,7 @@ title: a11yTO Camp
 identifier: camp
 email: info@a11yto.com
 description: Opening the doors for a full day of accessibility learning
-event-date: Saturday, May 18th, 2019
+event-date: Saturday, May 23rd, 2020
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://camp.a11yto.com/" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
@@ -31,7 +31,6 @@ plugins:
 
 sass:
   style: compressed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
