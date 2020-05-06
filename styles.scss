@@ -215,6 +215,9 @@ a:focus {
     border-bottom: 0;
     padding: 0.33em;
   }
+  a.current-page {
+    border-bottom: $link-underline;
+  }
   .tickets a {
     background: $brand-color;
     border-radius: 1.38em;
