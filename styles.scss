@@ -217,6 +217,9 @@ a:focus {
   }
   a.current-page {
     border-bottom: $link-underline;
+    &:focus {
+      border: 0;
+    }
   }
   .tickets a {
     background: $brand-color;
