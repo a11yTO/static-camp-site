@@ -518,12 +518,26 @@ button {
 /* -------------------------------------------------------------------------
 * Camp schedule table
 * ------------------------------------------------------------------------- */
+.tg-wrap {
+  overflow-x: auto;
+  margin-bottom: 2em;
+}
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
   color: #333;
   font-size: 0.85em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+  width: 100%;
+  min-width: 35em;
+  white-space: nowrap;
+}
+.col1 {
+  max-width: 6em;
+}
+.col2,
+.col3 {
+  width: 45%;
 }
 .tg a {
   color: $main-font-color;
