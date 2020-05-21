@@ -539,6 +539,13 @@ button {
 .col3 {
   width: 45%;
 }
+.stream-link {
+  background: $error;
+  border-radius: 1em;
+  color: white !important;
+  margin-left: 1.5em;
+  padding: 0.25em 1.25em;
+}
 .tg a {
   color: $main-font-color;
 }
