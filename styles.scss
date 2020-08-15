@@ -21,7 +21,7 @@ $base-font-size: 112.5%;
 $main-font-stack: "Open Sans", sans-serif;
 $heading-font-stack: "League Spartan", "Open Sans", sans-serif;
 $link-color: $secondary-color;
-$link-underline: 2px solid $brand-color;
+$link-underline: 1px solid $brand-color;
 
 $logo-height: 4em;
 
@@ -188,11 +188,10 @@ ol {
 /* -------------------------------------------------------------------------
  * Link styles
  * ------------------------------------------------------------------------- */
-a {
+ a {
   border-bottom: $link-underline;
   color: $link-color;
   text-decoration: none;
-  &:hover,
   &:active {
     border: 0;
     color: $secondary-color;
@@ -203,12 +202,6 @@ a:focus {
   border: 0;
   outline: 2px solid black;
 }
-.current-page {
-  border: 0;
-  color: $secondary-color !important;
-  font-weight: bold;
-}
-
 .nav-menu {
   a {
     color: $main-font-color;
@@ -217,9 +210,6 @@ a:focus {
   }
   a.current-page {
     border-bottom: $link-underline;
-    &:focus {
-      border: 0;
-    }
   }
   .tickets a {
     background: $brand-color;
@@ -230,12 +220,45 @@ a:focus {
     white-space: nowrap;
   }
 }
+a.current-page {
+  border: 0;
+  color: $secondary-color;
+  font-weight: bold;
+  &:focus {
+    border: 0;
+  }
+}
 .social-icons {
   a {
     padding: 0.75em 0.25em 0;
   }
 }
-/* End link styles */
+@supports (text-underline-offset: 0) {
+  a {
+    border: 0;
+    text-decoration-line: underline;
+    text-decoration-color: $brand-color;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+    text-decoration-skip-ink: none;
+  }
+  .nav-menu a,
+  .tickets a,
+  .branded-events a {
+    text-decoration-line: none;
+  }
+  a.current-page {
+    border: 0;
+    text-decoration-line: underline;
+  }
+  .nav-menu a.current-page {
+    border: 0;
+  }
+  footer a.current-page {
+    text-decoration-line: none;
+  }
+}
+ /* End link styles */
 
 /* -------------------------------------------------------------------------
  * Page structure & styles
