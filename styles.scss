@@ -23,8 +23,6 @@ $heading-font-stack: "League Spartan", "Open Sans", sans-serif;
 $link-color: $secondary-color;
 $link-underline: 1px solid $brand-color;
 
-$logo-height: 4em;
-
 $main-nav-mid-breakpoint: 30em;
 $main-nav-wide-breakpoint: 50em;
 
@@ -270,7 +268,7 @@ a.current-page {
   text-align: center;
 }
 .branding {
-  height: $logo-height;
+  height: 4.25em;
   padding: 0.33em 0;
   width: auto;
 }
@@ -304,30 +302,29 @@ a.current-page {
 }
 @supports (flex-wrap: wrap) {
   .site-header {
-    text-align: center;
-  }
-  .nav-menu,
-  .social-icons {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-navigation {
+    margin: 1em 0 0;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
   }
   .social-icons {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    li {
+      display: block;
+    }
   }
   @media screen and (min-width: $main-nav-mid-breakpoint) {
     .nav-menu {
       flex-direction: row;
-      justify-content: center;
-      padding: 1em 0;
-      li {
-        margin: 0 0.75em;
-      }
       .tickets {
         margin: 0 0.5em;
       }
@@ -341,13 +338,11 @@ a.current-page {
   }
   @media screen and (min-width: $main-nav-wide-breakpoint) {
     .site-header {
-      text-align: left;
-    }
-    .main-navigation {
-      float: right;
-    }
-    .nav-menu {
-      justify-content: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+      .branding {
+        align-self: flex-start;
+      }
     }
     .irl .nav-menu {
       padding: 1.8em 0;
