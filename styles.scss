@@ -14,7 +14,8 @@ $inverted-font-color: #ffffff;
 $background: #ffffff;
 $secondary-color: #025b9f;
 $secondary-background: #edf5f8;
-$error: #f00;
+$error: #b30a2e;
+$attention: yellow;
 
 $base-font-size: 112.5%;
 
@@ -679,21 +680,24 @@ button {
 /* -------------------------------------------------------------------------
  * Staged site structure & styles
  * ------------------------------------------------------------------------- */
-.staged {
+.staged,
+.attention {
   background: black;
   color: $inverted-font-color;
-  font-size: 75%;
+  font-size: 85%;
   line-height: 1.1;
+  font-weight: bold;
   margin: 0;
-  padding: 0.5em;
+  padding: 1em;
   text-align: center;
   width: 100%;
 }
-.staged a {
-  border-bottom: 1px solid white;
+.staged a,
+.attention a {
   color: $inverted-font-color;
 }
-.staged a:focus {
-  border: 0;
+.staged a:focus,
+.attention a:focus {
+  text-decoration: none;  
   outline: 2px solid white;
 }
