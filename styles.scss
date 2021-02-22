@@ -678,12 +678,11 @@ button {
 /* End #a11yTO.com Branded Events structure & styles */
 
 /* -------------------------------------------------------------------------
- * Staged site structure & styles
+ * Attention banner structure & styles
  * ------------------------------------------------------------------------- */
-.staged,
 .attention {
   background: black;
-  color: $inverted-font-color;
+  color: white;
   font-size: 85%;
   line-height: 1.1;
   font-weight: bold;
@@ -692,11 +691,15 @@ button {
   text-align: center;
   width: 100%;
 }
-.staged a,
 .attention a {
-  color: $inverted-font-color;
+  color: white;
+  white-space: nowrap;
 }
-.staged a:focus,
+@supports (text-underline-offset: 0) {
+  .attention a {
+    text-decoration-color: white;
+  }
+}
 .attention a:focus {
   text-decoration: none;  
   outline: 2px solid white;
