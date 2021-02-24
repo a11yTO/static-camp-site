@@ -264,6 +264,8 @@ a.current-page {
   font-size: $base-font-size;
 }
 .branding-logo {
+  color: $brand-color;
+  fill: $brand-color;
   height: auto;
   width: 13.25em;
 }
