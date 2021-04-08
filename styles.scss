@@ -24,8 +24,8 @@ $heading-font-stack: "League Spartan", "Open Sans", sans-serif;
 $link-color: $secondary-color;
 $link-underline: 1px solid $brand-color;
 
-$main-nav-mid-breakpoint: 30em;
-$main-nav-wide-breakpoint: 50em;
+$main-nav-mid-breakpoint: 36em;
+$main-nav-wide-breakpoint: 56em;
 
 /* -------------------------------------------------------------------------
  * Global reset
@@ -270,7 +270,7 @@ a.current-page {
 /* -------------------------------------------------------------------------
  * Page structure & styles
  * ------------------------------------------------------------------------- */
- .site-header {
+.site-header {
   background: $background;
   border-bottom: 3px solid $brand-color;
   padding: 1.25em 5%;
@@ -283,7 +283,7 @@ a.current-page {
   color: $brand-color;
   fill: $brand-color;
   height: auto;
-  width: 13.25em;
+  width: 14.25em;
 }
 .main-nav-menu {
   margin: 0.25em 0 0;
@@ -292,13 +292,16 @@ a.current-page {
     padding: 0;
     li {
       list-style: none;
-      margin: 0 0.25em 1em;
+      margin: 0 0.5em 1em;
     }
     .tickets {
       margin: 1.5em 0 1.75em;
     }
     .social {
       margin: 0;
+      li {
+        margin: 0 0.25em 1em;
+      }
     }
   }
 }
