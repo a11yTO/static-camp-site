@@ -234,12 +234,18 @@ a.current-page {
   border-radius: 1.5em;
   color: $brand-color !important;
   font-weight: bold;
-  padding: 0.15em 0.65em 0.25em;
+  // padding: 0.15em 0.65em 0.25em;
+  padding: 0.44em 1.25em;
   text-decoration: none;
   white-space: nowrap;
   &:focus {
     outline-color: #fff;
     outline-offset: 3px;
+  }
+}
+@media screen and (min-width: $main-nav-wide-breakpoint) {
+  .register a {
+    padding: 0.15em 0.65em 0.25em;
   }
 }
 @supports (text-underline-offset: 0) {
