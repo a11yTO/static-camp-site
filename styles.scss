@@ -204,7 +204,7 @@ a:focus {
     padding: 0.33em;
     text-decoration: none;
   }
-  a.current-page {
+  a[aria-current] {
     text-decoration: underline;
   }
   .tickets a {
@@ -219,7 +219,7 @@ a:focus {
     }
   }
 }
-a.current-page {
+a[aria-current] {
   color: $secondary-color;
   font-weight: bold;
   text-decoration: underline;
@@ -260,10 +260,10 @@ a.current-page {
   .branded-events a {
     text-decoration-line: none;
   }
-  .main-nav-menu a.current-page {
+  .main-nav-menu a[aria-current] {
     text-decoration-color: $brand-color;
   }
-  footer a.current-page {
+  footer a[aria-current] {
     text-decoration-line: none;
   }
   .staged a {
@@ -747,6 +747,6 @@ button {
   }
 }
 .attention a:focus {
-  text-decoration: none;  
+  text-decoration: none;
   outline: 2px solid white;
 }
