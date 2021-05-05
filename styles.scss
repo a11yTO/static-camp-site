@@ -196,6 +196,7 @@ a {
 *:focus,
 a:focus {
   outline: 2px solid black;
+  outline-offset: 3px;
   text-decoration: none;
 }
 .main-nav-menu {
@@ -214,9 +215,6 @@ a:focus {
     font-weight: bold;
     padding: 0.44em 1.25em;
     white-space: nowrap;
-    &:focus {
-      outline-offset: 3px;
-    }
   }
 }
 a[aria-current] {
@@ -240,7 +238,6 @@ a[aria-current] {
   white-space: nowrap;
   &:focus {
     outline-color: #fff;
-    outline-offset: 3px;
   }
 }
 @media screen and (min-width: $main-nav-wide-breakpoint) {
