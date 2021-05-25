@@ -591,7 +591,7 @@ button {
 * ------------------------------------------------------------------------- */
 .tg-wrap {
   overflow-x: auto;
-  margin-bottom: 2em;
+  margin: 1em 0;
 }
 .tg {
   border-collapse: collapse;
@@ -601,10 +601,9 @@ button {
   margin-bottom: 1em;
   width: 100%;
   min-width: 35em;
-  white-space: nowrap;
 }
 .col1 {
-  max-width: 6em;
+  max-width: 10%;
 }
 .col2,
 .col3 {
