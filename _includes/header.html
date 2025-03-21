@@ -19,12 +19,6 @@
   <meta property="og:image" content="https://a11yto.com/ogp.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:alt" content="The #a11yTO logo, white characters # a 1 1 y T O over a green slightly askew rectangle.">
-  <meta name="twitter:site" content="@{{ site.twitter_username }}">
-  <meta name="twitter:title" content="{{ site.title }}">
-  <meta name="twitter:description" content="{{ page.description }}">
-  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
-  <meta name="twitter:url" content="{{ site.url }}">
-  <meta name="twitter:domain" content="{{ site.url }}">
 </head>
 
 <body{% if page.id %} class="{{ page.id }}" {% endif %}>
@@ -44,8 +38,8 @@
           <li>
             <a {% if page.id=='open' %}aria-current="page"{% endif %} href="/a11yopen">#a11yOpen</a>
           </li>
-          <li class="tickets">
-            <a href="#"  rel="external nofollow">Get Tickets</a>
+          <li class="get-tickets">
+            <a class="featured-link" href="#"  rel="external nofollow">Get Tickets</a>
           </li> -->
           <li class="social">
             <ul class="social-icons">
@@ -97,13 +91,14 @@
       </nav>
     </div>
     {% if page.id == 'home' %}
-    <section class="event">
-      <h1 class="event-title">#{{ site.title }}</h1>
+    <section class="upcoming-event">
+      <p class="event-organizer">#a11yTO Presents:</p>
+      <h1 class="event-title">#a11yTO Camp 2024</h1>
       <p class="event-description">{{ site.description }}</p>
-      <ul class="event-detail">
-        <li class="event-date">Saturday, April 6th, 2024</li>
+      <ul class="event-specifics">
+        <li class="event-date">Saturday, April 6th, 2024, 9am to 4:30pm</li>
         <li class="event-location">Microsoft at CIBC Square</li>
-        <!-- <li class="register"><a href="#" rel="external nofollow">Get Tickets</a></li> -->
+        <!-- <li class="event-registration"><a class="featured-link inverse" href="#" rel="external nofollow">Get Tickets</a></li> -->
       </ul>
     </section>
     {% endif %}
