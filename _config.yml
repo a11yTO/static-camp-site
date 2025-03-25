@@ -19,7 +19,7 @@ email: info@a11yto.com
 description: Opening the doors for a day of accessibility learning
 event-date: Saturday, May 23rd, 2020
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://camp.a11yto.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://camp.a11yto.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title
 twitter_username: a11yTO
 
