@@ -462,7 +462,7 @@ a:focus-visible,
   outline-color: var(--light-accent);
 }
 .featured-link {
-  background-color: rgb(179 10 46);
+  background-color: #076800; /* hex brand color */
   background-color: var(--brand-color);
   border-radius: 1.38em;
   color: #222;
@@ -482,7 +482,7 @@ a:focus-visible,
 .featured-link.inverse {
   background-color: #fff;
   background-color: var(--background-color);
-  color: rgb(179 10 46);
+  color: #076800; /* hex brand color */
   color: var(--brand-color);
 }
 .featured-link.meetup,
@@ -496,19 +496,19 @@ a:focus-visible,
   color: var(--inverse-text-color);
 }
 .featured-link.meetup {
-  background-color: rgb(179 10 46);
+  background-color: #b30a2e;
   background-color: var(--meetup-brand-color);
 }
 .featured-link.gaming {
-  background-color: rgb(212 61 38);
+  background-color: #d43d27;
   background-color: var(--gaming-brand-color);
 }
 .featured-link.camp {
-  background-color: rgb(7 104 0);
+  background-color: #076800;
   background-color: var(--camp-brand-color);
 }
 .featured-link.conf {
-  background-color: rgb(2 91 159);
+  background-color: #025b9f;
   background-color: var(--conf-brand-color);
 }
 .main-nav-menu a[aria-current] {
