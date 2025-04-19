@@ -105,7 +105,7 @@ body {
   width: 1.75rem;
 }
 @supports (flex-wrap: wrap) {
-  @media (min-width: 58rem) {
+  @media (min-width: 62rem) {
     .site-header {
       padding-top: 0;
     }
