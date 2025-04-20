@@ -292,6 +292,7 @@ img.watching {
     .speaker {
       display: grid;
       grid-template-columns: 1fr auto;
+      column-gap: 1.5rem;
       align-content: start;
       min-height: 16rem;
     }
@@ -301,9 +302,6 @@ img.watching {
     }
     .speaker-picture {
       max-width: 10rem;
-    }
-    .speaker-bio {
-      padding: 0 1rem;
     }
   }
 }
