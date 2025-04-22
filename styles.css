@@ -285,10 +285,14 @@ img.watching {
   }
 }
 @supports (display: grid) {
+  .talk-title,
   .speaker-name {
     padding: 0.75rem 0;
   }
   @media (min-width: 35rem) {
+    .talk {
+      display: grid;
+    }
     .speaker {
       display: grid;
       grid-template-columns: 1fr auto;
