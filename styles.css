@@ -284,11 +284,14 @@ img.watching {
     }
   }
 }
+.talk {
+  margin-bottom: 1.5rem;
+}
+.talk-title,
+.speaker-name {
+  padding: 0.75rem 0;
+}
 @supports (display: grid) {
-  .talk-title,
-  .speaker-name {
-    padding: 0.75rem 0;
-  }
   @media (min-width: 35rem) {
     .talk {
       display: grid;
