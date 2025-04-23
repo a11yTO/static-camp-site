@@ -315,6 +315,9 @@ ul.schedule {
     }
   }
 }
+.logo {
+  margin: 1.5rem;
+}
 .colophon {
   padding: 0.5rem 5% 3rem;
 }
@@ -437,9 +440,6 @@ strong {
 }
 .sponsors {
   text-align: center;
-}
-.logo {
-  margin: 1rem;
 }
 .site-footer {
   border-top: 1px solid #076800; /* hex brand color */
