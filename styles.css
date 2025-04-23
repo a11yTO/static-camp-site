@@ -56,11 +56,6 @@ body {
     grid-column: 1/4;
     grid-row: 1/2;
   }
-  main,
-  .sponsorships {
-    margin: 0;
-    margin-bottom: 1.5rem;
-  }
   main {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -190,8 +185,16 @@ body {
 main,
 .sponsorships {
   padding: 0 5%;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 3rem;
   max-width: 44rem;
+}
+@supports (display: grid) {
+ main,
+ .sponsorships {
+   margin: 0;
+   margin-bottom: 1.5rem;
+   max-width: auto;
+ }
 }
 .past-event main {
   margin-bottom: 3rem;
