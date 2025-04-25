@@ -318,6 +318,13 @@ ul.schedule {
     }
   }
 }
+@supports (display: flex) {
+  .sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
 .logo {
   margin: 1.5rem;
 }
