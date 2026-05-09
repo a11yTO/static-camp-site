@@ -1,0 +1,954 @@
+﻿:root {
+  --dark: oklch(25.196% 0 none); /* #222222 */
+  --light: oklch(100% 0 none); /* #ffffff */
+
+  --main-brand-color: oklch(0% 0 none); /* #000000 */
+  --main-brand-color-50: oklch(
+    from var(--main-brand-color) l c h / calc(alpha - 0.5)
+  ); /* 50% lighter */
+  --conf-brand-color: oklch(46.448% 0.13143 250.27); /* #025b9f */
+  --conf-brand-color-50: oklch(
+    from var(--conf-brand-color) l c h / calc(alpha - 0.5)
+  ); /* 50% lighter */
+  --camp-brand-color: oklch(44.913% 0.15124 142.04); /* #076800 */
+  --camp-brand-color-50: oklch(
+    from var(--camp-brand-color) l c h / calc(alpha - 0.5)
+  ); /* 50% lighter */
+  --meetup-brand-color: oklch(48.818% 0.19165 20.152); /* #b30a2e */
+  --meetup-brand-color-50: oklch(
+    from var(--meetup-brand-color) l c h / calc(alpha - 0.5)
+  ); /* 50% lighter */
+  --gaming-brand-color: oklch(58.13% 0.19134 31.365); /* #d43d27 */
+  --gaming-brand-color-50: oklch(
+    from var(--gaming-brand-color) l c h / calc(alpha - 0.5)
+  ); /* 50% lighter */
+  --irl-brand-color: oklch(42.186% 0.13876 318.43); /* #6c2e7d */
+  --irl-brand-color-50: oklch(
+    from var(--irl-brand-color) l c h / calc(alpha - 0.5)
+  ); /* 50% lighter */
+
+  --text-color: var(--dark);
+  --inverse-text-color: var(--light);
+  --background-color: var(--light);
+  --inverse-background-color: var(--dark);
+  --light-accent: var(--light);
+  --dark-accent: var(--dark);
+  --link-color: oklch(46.448% 0.13143 250.27); /* #025b9f */
+  --secondary-background: #edf5f8;
+
+  --base-font-size: 112.5%;
+  --font-stack: "Open Sans", sans-serif;
+  --heading-font-stack: "League Spartan", sans-serif;
+}
+
+/* -------------------------------------------------------------------------
+ * Reset
+ * ------------------------------------------------------------------------- */
+:where(html) {
+  scrollbar-gutter: stable;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  min-block-size: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+p,
+ol,
+ul,
+iframe {
+  margin: 0 0 1.5rem;
+}
+img {
+  height: auto;
+  width: 100%;
+}
+iframe {
+  border: 0;
+  width: 100%;
+}
+strong {
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+ * Layout
+ * ------------------------------------------------------------------------- */
+html,
+body {
+  scroll-padding-top: 1rem;
+}
+.attention {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem 5% 0.75rem;
+  text-align: center;
+}
+.site-header {
+  border-bottom: 0.2rem solid;
+  margin-bottom: 1.5rem;
+}
+.masthead {
+  padding: 1.5rem 5% 0.5rem;
+}
+.colophon {
+  margin: 0 auto;
+  max-width: 75rem;
+}
+.upcoming-event,
+.colophon {
+  padding: 0 5%;
+}
+.branding-logo {
+  display: block;
+  max-height: 4rem;
+  margin: 0 auto;
+  width: auto;
+}
+.main-nav-menu a {
+  padding: 0.33rem;
+  text-decoration: none;
+}
+.nav-list {
+  margin: 0;
+  padding: 0;
+}
+.nav-list li {
+  padding: 0.75rem 0;
+}
+.social li {
+  display: inline;
+}
+.social-icons,
+.social-icons a {
+  padding: 0;
+  margin: 0;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons li {
+  margin: 0 0.35rem;
+}
+.social-icons a {
+  padding: 0 0.25rem;
+}
+.icon {
+  width: 1.75rem;
+}
+@supports (flex-wrap: wrap) {
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding-block-start: 0.3rem;
+  }
+  .social-icons li {
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 50rem) {
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+  }
+  @media (min-width: 70rem) {
+    .masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-inline: auto;
+      max-inline-size: 75rem;
+      padding: 0.75rem 5%;
+    }
+    .branding-logo {
+      height: 4rem;
+    }
+    .main-nav-menu li {
+      margin: 0;
+    }
+    .nav-list {
+      padding: 0;
+    }
+  }
+}
+/* @media (min-width: 70rem) {
+  html,
+  body {
+    scroll-padding-top: 6.5rem;
+  }
+  body.home {
+    scroll-padding-top: 1rem;
+  }
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  body.home .site-header,
+  body.past-event .site-header {
+    position: initial;
+  }
+} */
+.upcoming-event {
+  overflow: auto;
+  padding: 1rem 5% 0.5rem;
+}
+.event-organizer {
+  margin: 0 0 0.5rem;
+}
+.event-title {
+  margin: 0;
+}
+.event-description {
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+.event-specifics {
+  padding: 0;
+}
+.event-details,
+.event-registration {
+  margin: 1.5rem 0;
+}
+main {
+  box-sizing: border-box;
+  padding: 0 5%;
+  margin: 0 auto;
+  max-width: 48rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: capitalize;
+}
+.sub-head {
+  margin-bottom: 0.25rem;
+}
+h2 + .sub-head,
+h3 + .sub-head,
+h4 + .sub-head {
+  margin-top: 0.25rem;
+}
+.branded-events {
+  margin-bottom: 1.5rem;
+}
+.venue {
+  margin-top: 1.5rem;
+}
+.address,
+.venue-details {
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  margin: 0.75rem 0;
+  width: 100%;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.team {
+  list-style: none;
+  padding: 0;
+}
+.team li {
+  margin: 0 1.25rem;
+}
+.team p {
+  margin: 0;
+}
+.team img {
+  height: auto;
+  max-width: 14rem;
+}
+img.watching {
+  transform: rotate(90deg);
+}
+@supports (display: grid) {
+  .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+    grid-gap: 1.5rem;
+  }
+  .team img {
+    max-width: 12rem;
+  }
+  @media (min-width: 44.2rem) {
+    img.watching {
+      transform: rotate(44deg);
+    }
+  }
+}
+.talk-title,
+.speaker-name {
+  margin-bottom: 0.75rem;
+}
+ul.schedule {
+  margin: 1.5rem 0;
+}
+.speaker {
+  margin-bottom: 3rem;
+}
+@supports (display: grid) {
+  @media (min-width: 35rem) {
+    .talk {
+      display: grid;
+    }
+    .speaker {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 1.5rem;
+      align-content: start;
+    }
+    .speaker-name {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+    .speaker-image {
+      max-width: 10rem;
+    }
+    .speaker-bio p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.logo {
+  margin: 1.5rem 0;
+}
+@supports (display: flex) {
+  @media (min-width: 35rem) {
+    .sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .logo {
+      margin: 1.5rem 3rem;
+    }
+  }
+}
+.site-footer {
+  border-top: 0.1rem solid;
+  margin-top: 3rem;
+}
+.colophon {
+  padding: 1.5rem 5%;
+}
+.colophon ul {
+  padding: 0;
+}
+.colophon li {
+  list-style-type: "";
+}
+.colophon a {
+  display: inline-block;
+}
+@supports (display: flex) {
+  .colophon ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .colophon li {
+    margin: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Typography & Styles
+ * ------------------------------------------------------------------------- */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-stack, "Open Sans", sans-serif);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 112.5%;
+  font-size: var(--base-font-size, 112.5%);
+  font-variation-settings: "wdth" 100;
+  line-height: 1.5;
+}
+.masthead,
+.upcoming-event,
+.colophon {
+  text-align: center;
+}
+.main-nav-menu li {
+  list-style: none;
+}
+.main-nav-menu a {
+  text-decoration: none;
+}
+.upcoming-event {
+  font-weight: bold;
+  overflow: visible;
+}
+.event-title {
+  font-size: 3.375rem;
+}
+.event-description {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-wrap: pretty;
+}
+.event-specifics {
+  list-style-type: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "League Spartan", sans-serif;
+  font-family: var(--heading-font-stack, "League Spartan", sans-serif);
+  font-size: 2.25rem;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+@media (min-width: 35rem) {
+  .page-title {
+    font-size: 3.375rem;
+  }
+}
+.address,
+.venue-details {
+  list-style-type: "";
+}
+.venue-address,
+.venue-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.speaker-image {
+  display: block;
+  height: auto;
+  margin: 0 auto 1rem;
+  width: 12rem;
+}
+.sub-head {
+  font-size: 1.5rem;
+}
+.branded-events {
+  text-align: center;
+}
+.team li {
+  text-align: center;
+}
+.speaker-image,
+.organizer-image {
+  border: 0.1rem solid;
+  border-radius: 50%;
+}
+.sponsors {
+  text-align: center;
+}
+a {
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.15rem;
+}
+.skip-link {
+  padding: 0.25rem 0.65rem;
+  position: absolute;
+  top: 0.75rem;
+  left: -9999rem;
+  z-index: 10000;
+}
+.main-nav-menu [aria-current] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.2rem;
+}
+.colophon [aria-current] {
+  text-decoration: none;
+}
+.featured-link {
+  border-radius: 1.38em;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.featured-link.inverse {
+  font-weight: 700;
+}
+.join-us .featured-link,
+.get-tickets .featured-link,
+.buy-tickets .featured-link {
+  font-size: 1.125rem;
+  padding: 0.5rem 1.5rem;
+}
+.playlist-list,
+.schedule-list {
+  margin: 1.5rem 0 3rem;
+}
+.playlist-list h3,
+.schedule-list h2 {
+  font-size: var(--base-font-size, 112.5%);
+  font-family: var(--font-stack, "Open Sans", sans-serif);
+  line-height: 1.2;
+}
+.playlist-list .speaker-name,
+.schedule-list .speaker-name {
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------------------
+ * Themes
+ * ------------------------------------------------------------------------- */
+/* Base - High Contrast Theme  */
+body {
+  background: #fff;
+  color: #222222;
+}
+a {
+  color: #025b9f;
+  text-decoration-color: #7f7f7f;
+}
+.skip-link {
+  background-color: #fff;
+}
+.attention {
+  background-color: #000;
+  color: #fff;
+}
+.attention a,
+.past-event .attention a {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+.site-header .attention .inverse {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+.site-header,
+.site-footer {
+  border-color: #000;
+  background-color: #fff;
+}
+.branding-logo,
+.icon {
+  fill: #000;
+}
+.main-nav-menu a {
+  color: #222;
+}
+.main-nav-menu [aria-current] {
+  color: #025b9f;
+  text-decoration-color: #7f7f7f;
+}
+.upcoming-event {
+  background-color: #000;
+}
+.upcoming-event,
+.upcoming-event .event-title {
+  color: #fff;
+}
+.join-us .featured-link,
+.get-tickets .featured-link,
+.buy-tickets .featured-link,
+.branded-events .featured-link {
+  color: #fff;
+  background-color: #000;
+}
+.upcoming-event .featured-link {
+  color: #000;
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+.colophon [aria-current] {
+  color: #222;
+}
+/* If an 'increase contrast' setting is set on a users OS the following colours will not display */
+@media (prefers-contrast: no-preference) {
+  .upcoming-event .featured-link.conf,
+  .upcoming-event .featured-link.camp,
+  .upcoming-event .featured-link.meetup,
+  .upcoming-event .featured-link.gaming,
+  .upcoming-event .featured-link.irl {
+    color: #fff;
+  }
+  .featured-link.conf,
+  .branded-events .conf {
+    background-color: #025b9f;
+  }
+  .featured-link.camp,
+  .branded-events .camp {
+    background-color: #076800;
+  }
+  .featured-link.meetup,
+  .branded-events .meetup {
+    background-color: #b30a2e;
+  }
+  .featured-link.gaming,
+  .branded-events .gaming {
+    background-color: #d43d27;
+  }
+  .featured-link.irl,
+  .branded-events .irl {
+    background-color: #6c2e7d;
+  }
+  .speaker-image,
+  .organizer-image {
+    border-color: #7f7f7f;
+  }
+  /* Conf Theme */
+  .conf {
+    a,
+    .main-nav-menu [aria-current] {
+      text-decoration-color: var(--conf-brand-color-50, #80adcf);
+    }
+    .site-header,
+    .site-footer {
+      border-color: var(--conf-brand-color, #025b9f);
+    }
+    .branding-logo,
+    .icon {
+      fill: var(--conf-brand-color, #025b9f);
+    }
+    .upcoming-event {
+      background-color: var(--conf-brand-color, #025b9f);
+    }
+    .buy-tickets,
+    .get-tickets,
+    .join-us {
+      .featured-link {
+        background-color: var(--conf-brand-color, #025b9f);
+      }
+    }
+    .upcoming-event {
+      .featured-link {
+        color: var(--conf-brand-color, #025b9f);
+      }
+    }
+    .speaker-image,
+    .organizer-image {
+      border-color: var(--conf-brand-color-50, #80adcf);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--conf-brand-color, #025b9f);
+    }
+  }
+  /* Camp Theme */
+  .camp {
+    a,
+    .main-nav-menu [aria-current] {
+      text-decoration-color: var(--camp-brand-color-50, #83b37f);
+    }
+    .site-header,
+    .site-footer {
+      border-color: var(--camp-brand-color, #076800);
+    }
+    .branding-logo,
+    .icon {
+      fill: var(--camp-brand-color, #076800);
+    }
+    .upcoming-event {
+      background-color: var(--camp-brand-color, #076800);
+    }
+    .buy-tickets,
+    .get-tickets,
+    .join-us {
+      .featured-link {
+        background-color: var(--camp-brand-color, #076800);
+      }
+    }
+    .upcoming-event {
+      .featured-link {
+        color: var(--camp-brand-color, #076800);
+      }
+    }
+    .speaker-image,
+    .organizer-image {
+      border-color: var(--camp-brand-color-50, #83b37f);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--camp-brand-color, #076800);
+    }
+  }
+  /* Camp Theme */
+  .meetup {
+    a,
+    .main-nav-menu [aria-current] {
+      text-decoration-color: var(--meetup-brand-color-50, #d98496);
+    }
+    .site-header,
+    .site-footer {
+      border-color: var(--meetup-brand-color, #b30a2e);
+    }
+    .branding-logo,
+    .icon {
+      fill: var(--meetup-brand-color, #b30a2e);
+    }
+    .upcoming-event {
+      background-color: var(--meetup-brand-color, #b30a2e);
+    }
+    .buy-tickets,
+    .get-tickets,
+    .join-us {
+      .featured-link {
+        background-color: var(--meetup-brand-color, #b30a2e);
+      }
+    }
+    .upcoming-event {
+      .featured-link {
+        color: var(--meetup-brand-color, #b30a2e);
+      }
+    }
+    .speaker-image,
+    .organizer-image {
+      border-color: var(--meetup-brand-color-50, #d98496);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--meetup-brand-color, #b30a2e);
+    }
+  }
+  /* Gaming Theme */
+  .gaming {
+    a,
+    .main-nav-menu [aria-current] {
+      text-decoration-color: var(--gaming-brand-color-50, #e99e93);
+    }
+    .site-header,
+    .site-footer {
+      border-color: var(--gaming-brand-color, #d43d27);
+    }
+    .branding-logo,
+    .icon {
+      fill: var(--gaming-brand-color, #d43d27);
+    }
+    .upcoming-event {
+      background-color: var(--gaming-brand-color, #d43d27);
+    }
+    .buy-tickets,
+    .get-tickets,
+    .join-us {
+      .featured-link {
+        background-color: var(--gaming-brand-color, #d43d27);
+      }
+    }
+    .upcoming-event {
+      .featured-link {
+        color: var(--gaming-brand-color, #d43d27);
+      }
+    }
+    .speaker-image,
+    .organizer-image {
+      border-color: var(--gaming-brand-color-50, #e99e93);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--gaming-brand-color, #d43d27);
+    }
+  }
+  /* IRL Theme */
+  .irl {
+    a,
+    .main-nav-menu [aria-current] {
+      text-decoration-color: var(--irl-brand-color-50, #b596be);
+    }
+    .site-header,
+    .site-footer {
+      border-color: var(--irl-brand-color, #6c2e7d);
+    }
+    .branding-logo,
+    .icon {
+      fill: var(--irl-brand-color, #6c2e7d);
+    }
+    .upcoming-event {
+      background-color: var(--irl-brand-color, #6c2e7d);
+    }
+    .buy-tickets,
+    .get-tickets,
+    .join-us {
+      .featured-link {
+        background-color: var(--irl-brand-color, #6c2e7d);
+      }
+    }
+    .upcoming-event {
+      .featured-link {
+        color: var(--irl-brand-color, #6c2e7d);
+      }
+    }
+    .speaker-image,
+    .organizer-image {
+      border-color: var(--irl-brand-color-50, #b596be);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--irl-brand-color, #6c2e7d);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Focus structure and styles
+ * ------------------------------------------------------------------------- */
+*:focus {
+  outline: 2px solid #222;
+  outline-color: var(--dark-accent);
+  outline-offset: 0.2rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+.attention a:focus,
+.inverse:focus {
+  outline-color: #fff;
+  outline-color: var(--light-accent);
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+*:focus-visible {
+  outline: 0.175rem solid #222;
+  outline-color: var(--dark-accent);
+}
+.attention a:focus-visible,
+.inverse:focus-visible {
+  outline-color: #fff;
+  outline-color: var(--light-accent);
+  outline-offset: 0.2rem;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 0.75rem;
+  outline-offset: 0;
+}
+
+/* -------------------------------------------------------------------------
+ * Utility classes
+ * ------------------------------------------------------------------------- */
+/* A utility class to hide content visually while keeping it screen reader-accessible.
+  * Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.no-caps {
+  text-transform: initial;
+}
+/* Utility max-width classes for sponsor images */
+.mw-90 {
+  max-width: 5.625em;
+}
+.mw-100 {
+  max-width: 6.25em;
+}
+.mw-110 {
+  max-width: 6.875em;
+}
+.mw-120 {
+  max-width: 7.5em;
+}
+.mw-130 {
+  max-width: 8.125em;
+}
+.mw-140 {
+  max-width: 8.75em;
+}
+.mw-150 {
+  max-width: 9.375em;
+}
+.mw-160 {
+  max-width: 10em;
+}
+.mw-170 {
+  max-width: 10.625em;
+}
+.mw-180 {
+  max-width: 11.25em;
+}
+.mw-190 {
+  max-width: 11.875em;
+}
+.mw-200 {
+  max-width: 12.5em;
+}
+.mw-210 {
+  max-width: 13.125em;
+}
+.mw-220 {
+  max-width: 13.75em;
+}
+.mw-230 {
+  max-width: 14.375em;
+}
+.mw-240 {
+  max-width: 15em;
+}
+.mw-250 {
+  max-width: 15.625em;
+}
+.mw-260 {
+  max-width: 16.25em;
+}
+.mw-270 {
+  max-width: 16.875em;
+}
+.mw-280 {
+  max-width: 17.5em;
+}
